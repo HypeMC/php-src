@@ -87,3 +87,5 @@ function pcntl_rfork(int $flags, int $signal = 0): int{}
 #ifdef HAVE_FORKX
 function pcntl_forkx(int $flags): int{}
 #endif
+
+function pcntl_strsignal(int $signal): string{}

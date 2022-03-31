@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: e9f831c37e960f9b0db7561faefe61d49dd7df21 */
+ * Stub hash: 0ae2082cbd1c3bc80591f1d85df85e18a38bc5ff */
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pcntl_fork, 0, 0, IS_LONG, 0)
 ZEND_END_ARG_INFO()
@@ -132,6 +132,10 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pcntl_forkx, 0, 1, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 #endif
 
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pcntl_strsignal, 0, 1, IS_STRING, 0)
+	ZEND_ARG_TYPE_INFO(0, signal, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
 
 ZEND_FUNCTION(pcntl_fork);
 ZEND_FUNCTION(pcntl_waitpid);
@@ -177,6 +181,7 @@ ZEND_FUNCTION(pcntl_rfork);
 #if defined(HAVE_FORKX)
 ZEND_FUNCTION(pcntl_forkx);
 #endif
+ZEND_FUNCTION(pcntl_strsignal);
 
 
 static const zend_function_entry ext_functions[] = {
@@ -225,5 +230,6 @@ static const zend_function_entry ext_functions[] = {
 #if defined(HAVE_FORKX)
 	ZEND_FE(pcntl_forkx, arginfo_pcntl_forkx)
 #endif
+	ZEND_FE(pcntl_strsignal, arginfo_pcntl_strsignal)
 	ZEND_FE_END
 };

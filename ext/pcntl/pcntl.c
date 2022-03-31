@@ -1638,3 +1638,18 @@ static void pcntl_interrupt_function(zend_execute_data *execute_data)
 		orig_interrupt_function(execute_data);
 	}
 }
+
+/* {{{ Returns the name of the signal */
+PHP_FUNCTION(pcntl_strsignal)
+{
+	zend_long signo;
+	const char *str;
+
+	ZEND_PARSE_PARAMETERS_START(1, 1)
+		Z_PARAM_LONG(signo)
+	ZEND_PARSE_PARAMETERS_END();
+
+	str = strsignal(signo);
+	RETURN_STRING(str);
+}
+/* }}} */
