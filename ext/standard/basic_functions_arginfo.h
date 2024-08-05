@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: 504f4172ac1d64535719234888400063eb37361b */
+ * Stub hash: 8adf6b819494af2ff1234b42025e5d6a6dd152c8 */
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_set_time_limit, 0, 1, _IS_BOOL, 0)
 	ZEND_ARG_TYPE_INFO(0, seconds, IS_LONG, 0)
@@ -213,6 +213,8 @@ ZEND_END_ARG_INFO()
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_array_merge, 0, 0, IS_ARRAY, 0)
 	ZEND_ARG_VARIADIC_TYPE_INFO(0, arrays, IS_ARRAY, 0)
 ZEND_END_ARG_INFO()
+
+#define arginfo_array_merge_deep arginfo_array_merge
 
 #define arginfo_array_merge_recursive arginfo_array_merge
 
@@ -2383,6 +2385,7 @@ ZEND_FUNCTION(array_unshift);
 ZEND_FUNCTION(array_splice);
 ZEND_FUNCTION(array_slice);
 ZEND_FUNCTION(array_merge);
+ZEND_FUNCTION(array_merge_deep);
 ZEND_FUNCTION(array_merge_recursive);
 ZEND_FUNCTION(array_replace);
 ZEND_FUNCTION(array_replace_recursive);
@@ -3012,6 +3015,7 @@ static const zend_function_entry ext_functions[] = {
 	ZEND_FE(array_splice, arginfo_array_splice)
 	ZEND_RAW_FENTRY("array_slice", zif_array_slice, arginfo_array_slice, ZEND_ACC_COMPILE_TIME_EVAL, NULL, NULL)
 	ZEND_RAW_FENTRY("array_merge", zif_array_merge, arginfo_array_merge, ZEND_ACC_COMPILE_TIME_EVAL, NULL, NULL)
+	ZEND_RAW_FENTRY("array_merge_deep", zif_array_merge_deep, arginfo_array_merge_deep, ZEND_ACC_COMPILE_TIME_EVAL, NULL, NULL)
 	ZEND_RAW_FENTRY("array_merge_recursive", zif_array_merge_recursive, arginfo_array_merge_recursive, ZEND_ACC_COMPILE_TIME_EVAL, NULL, NULL)
 	ZEND_RAW_FENTRY("array_replace", zif_array_replace, arginfo_array_replace, ZEND_ACC_COMPILE_TIME_EVAL, NULL, NULL)
 	ZEND_RAW_FENTRY("array_replace_recursive", zif_array_replace_recursive, arginfo_array_replace_recursive, ZEND_ACC_COMPILE_TIME_EVAL, NULL, NULL)

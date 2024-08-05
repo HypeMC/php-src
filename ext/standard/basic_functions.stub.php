@@ -1682,6 +1682,11 @@ function array_merge(array ...$arrays): array {}
 /**
  * @compile-time-eval
  */
+function array_merge_deep(array ...$arrays): array {}
+
+/**
+ * @compile-time-eval
+ */
 function array_merge_recursive(array ...$arrays): array {}
 
 /**

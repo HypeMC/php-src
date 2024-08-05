@@ -26,6 +26,7 @@ PHP_MINIT_FUNCTION(array);
 PHP_MSHUTDOWN_FUNCTION(array);
 
 PHPAPI int php_array_merge(HashTable *dest, HashTable *src);
+PHPAPI int php_array_merge_deep(HashTable *dest, HashTable *src);
 PHPAPI int php_array_merge_recursive(HashTable *dest, HashTable *src);
 PHPAPI int php_array_replace_recursive(HashTable *dest, HashTable *src);
 PHPAPI int php_multisort_compare(const void *a, const void *b);
